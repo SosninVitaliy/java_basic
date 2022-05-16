@@ -53,9 +53,5 @@ public class Main {
             System.out.println("Программа выполнена корректно");
         }
         System.out.println(arithmeticMeanRounding);
-
-//      Задача №5_Операторы
-        System.out.println("Input q: ");
-        double q = in.nextInt();
     }
 }
