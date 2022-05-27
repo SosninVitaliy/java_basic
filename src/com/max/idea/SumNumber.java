@@ -22,5 +22,6 @@ class SumNumber {
                 }
             }
             System.out.println("Сумма нечетных цифр до введенного пользователем числа n: " + sum);
+        input.close();
     }
 }
