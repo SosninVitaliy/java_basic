@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class ArithmeticMean {
 
     static Scanner input = new Scanner(System.in); // Объявляем Scanner
-    static Scanner in = new Scanner(System.in); // Объявляем Scanner
     static double[] array = new double[0];
 
     public static void main(String[] args) {
@@ -19,14 +18,14 @@ public class ArithmeticMean {
             size = input.nextInt();// Читаем с клавиатуры размер массива и записываем в size
 
         } while (size <= 0);
-        array = new double[size]; // Создаём массив int размером в size
+        array = new double[size]; // Создаём массив double размером в size
         System.out.println("Введите данные для массива типа double:");
         for (int i = 0; i < size; i++) {
-            if (in.hasNextDouble()) {
-                array[i] = in.nextDouble(); // Заполняем массив элементами, введёнными с клавиатуры
+            if (input.hasNextDouble()) {
+                array[i] = input.nextDouble(); // Заполняем массив элементами, введёнными с клавиатуры
             }else {
                 System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
-                in.next();
+                input.next();
             }
         }
         double sum = 0;
@@ -39,6 +38,6 @@ public class ArithmeticMean {
             System.out.println(array[i] * arithmeticMean + " - произведение элемента массива и среднего арифметического числа массива. " + i + " инндекс элемента массива");
         }
         input.close();
-        in.close();
+        input.close();
     }
 }
