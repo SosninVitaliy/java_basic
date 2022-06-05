@@ -13,19 +13,17 @@ public class Data {
     public static void main(String[] args) {
 
 //      Ввести число с клавиатуры
-
         do {
             System.out.println("Введите целое положительное число: ");
             while (!input.hasNextInt()) {
                 System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
                 input.next();
             }
-                number1 = input.nextInt();
+            number1 = input.nextInt();
         } while (number1 <= 0);
 
-
 //      Записываем число в строковую переменную
-            result = number1.toString();
+        result = number1.toString();
 
 //      Ввести число с клавиатуры
         do {
@@ -38,15 +36,14 @@ public class Data {
         } while (number2 <= 0);
 
 //      Сравниваем два числа
-            if (number1 == number2) {
-                System.out.println("Числа равны");
-            } else {
-                System.out.println("Это число больше: " + Math.max(number1, number2));
-                int min = Math.min(number1, number2);
-                System.out.println("Наименьшее число " + (double) min);
-            }
-
-            input.close();
+        if (number1 == number2) {
+            System.out.println("Числа равны");
+        } else {
+            System.out.println("Это число больше: " + Math.max(number1, number2));
+            int min = Math.min(number1, number2);
+            System.out.println("Наименьшее число " + (double) min);
         }
-    }
 
+        input.close();
+    }
+}
